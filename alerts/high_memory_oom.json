@@ -1,0 +1,13 @@
+{
+  "alert_source": "datadog",
+  "alert_name": "report-worker OOMKilled repeatedly",
+  "status": "firing",
+  "severity": "high",
+  "startsAt": "2026-10-07T11:30:00Z",
+  "annotations": {
+    "summary": "report-worker memory at 98% of 512Mi limit; container OOMKilled 6 times in 1 hour",
+    "last_log_lines": "Loading 1.2M rows into memory for monthly_report... | Killed (exit code 137, reason: OOMKilled)",
+    "trend": "Memory grows linearly after each job start; started after feature flag 'monthly_report_v2' enabled"
+  },
+  "labels": {"service": "report-worker", "environment": "production", "memory_limit": "512Mi"}
+}

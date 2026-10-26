@@ -1,0 +1,13 @@
+{
+  "alert_source": "datadog",
+  "alert_name": "orders-service cannot connect to PostgreSQL",
+  "status": "firing",
+  "severity": "critical",
+  "startsAt": "2026-10-07T10:02:00Z",
+  "annotations": {
+    "summary": "Error rate 38% on orders-service; logs show 'connection refused' to orders-db:5432",
+    "last_log_lines": "psycopg2.OperationalError: could not connect to server: Connection refused. Is the server running on host orders-db (10.0.4.21) and accepting TCP/IP connections on port 5432?",
+    "db_metrics": "orders-db active_connections=0, cpu=0%, pod status=Pending (node disk pressure)"
+  },
+  "labels": {"service": "orders-service", "dependency": "orders-db", "environment": "production"}
+}

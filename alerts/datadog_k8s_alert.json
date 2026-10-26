@@ -1,0 +1,18 @@
+{
+  "alert_source": "datadog",
+  "alert_name": "Kubernetes pod CrashLoopBackOff in checkout namespace",
+  "status": "firing",
+  "severity": "critical",
+  "startsAt": "2026-10-07T09:12:00Z",
+  "annotations": {
+    "summary": "Pod checkout-api-7d9f8b6c5-x2kqp restarted 14 times in 10 minutes (CrashLoopBackOff)",
+    "last_log_lines": "Error: missing required env var PAYMENT_API_URL | exit code 1",
+    "recent_change": "Deployment checkout-api v2.4.1 rolled out at 09:05Z"
+  },
+  "labels": {
+    "service": "checkout-api",
+    "kube_namespace": "checkout",
+    "kube_cluster": "prod-eu-1",
+    "environment": "production"
+  }
+}

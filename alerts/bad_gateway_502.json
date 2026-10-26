@@ -1,0 +1,13 @@
+{
+  "alert_source": "datadog",
+  "alert_name": "Spike in 502 Bad Gateway on api.shop.example",
+  "status": "firing",
+  "severity": "critical",
+  "startsAt": "2026-10-07T13:45:00Z",
+  "annotations": {
+    "summary": "502 rate jumped from 0.1% to 27% at the nginx ingress for /api/*",
+    "last_log_lines": "nginx: upstream prematurely closed connection while reading response header from upstream, upstream: http://10.0.7.15:8080/api/cart",
+    "upstream_health": "cart-service: 1 of 3 pods Ready; readiness probe failing (timeout 1s); deploy cart-service v3.2.0 at 13:40Z"
+  },
+  "labels": {"service": "cart-service", "ingress": "nginx-public", "environment": "production"}
+}
